@@ -1,0 +1,32 @@
+import React from 'react'
+import './ContactMe.css'
+import ContactInfoCard from './ContactInfoCard/ContactInfoCard'
+import ContactForm from './ContactForm/ContactForm'
+import {Link} from 'react-router-dom'
+const ContactMe = () => {
+  return (
+    <section className='contact-container'>
+      
+      <h5>ContactMe</h5>
+      <div className='contact-content'>
+        <div style={{flex:1}}>
+            <ContactInfoCard 
+             iconUrl="./images/email.png.png"
+             text="Johntimetoprogram.com"
+            />
+            <ContactInfoCard 
+             iconUrl="./images/git.png"
+             text="https//github.com/time-to-program"
+            />
+        </div>
+        <div style={{flex:1}}>
+            <ContactForm />
+        </div>
+
+      </div>
+      
+    </section>
+  )
+}
+
+export default ContactMe
