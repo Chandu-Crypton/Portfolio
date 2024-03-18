@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import MobileNav from './MobileNav/MobileNav';
+import {Link} from 'react-router-dom'
+import Hero from '../Hero/Hero';
 const Navbar = () => {
     const [openMenu,setOpenMenu] = useState(false);
     const toggleMenu = () => {
@@ -15,13 +17,13 @@ const Navbar = () => {
             <img className="logo" src="" alt=""/>
             <ul>
                 <li>
-                    <a className='menu-item'>Home</a>
+                    <Link to='/home' className='menu-item'>Home</Link>
                 </li>
                 <li>
-                    <a  className='menu-item'>Skills</a>
+                    <Link to='/skills'  className='menu-item'>Skills</Link>
                 </li>
                 <li>
-                    <a className='menu-item'>Contact Me</a>
+                    <Link to='/contactme' className='menu-item'>Contact Me</Link>
                 </li>
 
                 <button className='contact-btn' onClick={()=>{}}>Hire Me</button>
@@ -34,6 +36,7 @@ const Navbar = () => {
             </button>
         </div>
       </nav>
+      <Hero/>
     </>
   )
 }

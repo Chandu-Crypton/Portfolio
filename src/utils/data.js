@@ -2,7 +2,7 @@
 export const SKILLS =[
     {
         title:'Frontend',  
-        icon:'./images/front2.png.png',
+        icon:'./images/frontend.png',
         skills:[
             {skill : 'HTML5',percentage:'80%'},
             {skill : 'CSS3 (Sass/SCSS)',percentage:'90%'},

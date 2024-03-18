@@ -6,20 +6,31 @@ import Hero from './components/Hero/Hero'
 import Skills from './components/Skills/Skills'
 import ContactMe from './components/ContactMe/ContactMe'
 import Footer from './components/Footer/Footer'
+import { createBrowserRouter ,RouterProvider} from 'react-router-dom'
+
+const appRouter = createBrowserRouter([{
+  path : '/home',
+  element:<Navbar/>
+},
+{
+  path : '/skills',
+  element:<Skills/>
+},
+{
+  path : '/contactme',
+  element:<ContactMe/>
+}
+])
 
 function App() {
   
 
   return (
     <>
-
-        <Navbar/>
-   <div className='container'>
-     <Hero/>
-    <Skills />
-    <ContactMe /> 
-   </div>
-   <Footer />
+     <RouterProvider
+     router={appRouter}
+     />
+      
    
       
     </>
